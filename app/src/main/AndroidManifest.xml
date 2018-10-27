@@ -27,15 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-=======
-        <activity
-            android:name=".view.room.RoomDetail"
-            android:screenOrientation="portrait" />
-        <activity android:name=".view.post.PostItent" />
+
         <activity android:name=".view.introduce.IntroduceActivity" />
         <activity android:name=".view.contact.ContactActivity"></activity>
->>>>>>> 1b5683019d810dd0d558aca64c4e2d6143428246
+
     </application>
 
 </manifest>

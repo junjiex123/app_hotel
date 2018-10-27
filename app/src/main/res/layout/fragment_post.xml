@@ -14,7 +14,6 @@ tools:context=".view.post.PostFragment">
     android:layout_centerHorizontal="true"
     android:orientation="vertical">
 
-<<<<<<< HEAD
     <TextView
         android:id="@+id/lvTitle"
         android:layout_width="match_parent"
@@ -24,9 +23,7 @@ tools:context=".view.post.PostFragment">
         android:gravity="center"
         android:text="DANH SÁCH TIN TỨC"
         android:textSize="20sp" />
-=======
     <include layout="@layout/toolbar_layout"/>
->>>>>>> 1b5683019d810dd0d558aca64c4e2d6143428246
 
     <ListView
         android:id="@+id/listviewPost"
