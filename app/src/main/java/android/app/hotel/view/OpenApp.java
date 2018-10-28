@@ -20,7 +20,9 @@ public class OpenApp extends AppCompatActivity {
             public void run() {
                 try {
                     Thread.sleep(5000);
-                    mLayoutFlash.setVisibility(View.GONE);
+                    Intent wellcome = new Intent(OpenApp.this,MainActivity.class);
+                    startActivity(wellcome);
+                    finish();
                 }catch (Exception e)
                 {
                     e.printStackTrace();
@@ -31,8 +33,6 @@ public class OpenApp extends AppCompatActivity {
                         if (mLayoutFlash!=null)
                         {
                             mLayoutFlash.setVisibility(View.GONE);
-                            Intent wellcome = new Intent(OpenApp.this,MainActivity.class);
-                            startActivity(wellcome);
                         }
                     }
                 });
