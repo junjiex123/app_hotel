@@ -5,6 +5,7 @@ import android.app.hotel.R;
 import android.app.hotel.adapter.MoreLayoutAdapter;
 import android.app.hotel.model.more.MoreLayout;
 import android.app.hotel.view.contact.ContactActivity;
+import android.app.hotel.view.huongdan.HuongDanIntent;
 import android.app.hotel.view.introduce.IntroduceActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,6 +59,10 @@ public class MoreFragment extends Fragment {
                         //Toast.makeText(getActivity(),"Hello Liên hệ",Toast.LENGTH_SHORT).show();
                         Intent iLienHe = new Intent(getActivity(), ContactActivity.class);
                         startActivity(iLienHe);
+                        break;
+                    case 4:
+                        Intent iHuongDan = new Intent(getActivity(), HuongDanIntent.class);
+                        startActivity(iHuongDan);
                         break;
 
                         default:

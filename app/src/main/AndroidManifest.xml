@@ -13,12 +13,10 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.MainActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".view.room.RoomDetail"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity android:name=".view.post.PostItent" />
         <activity android:name=".view.OpenApp">
             <intent-filter>
@@ -27,10 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".view.introduce.IntroduceActivity" />
-        <activity android:name=".view.contact.ContactActivity"></activity>
-
+        <activity android:name=".view.contact.ContactActivity" />
+        <activity android:name=".view.huongdan.HuongDanIntent"></activity>
     </application>
 
 </manifest>
