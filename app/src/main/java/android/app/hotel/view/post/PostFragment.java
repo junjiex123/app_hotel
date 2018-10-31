@@ -31,7 +31,6 @@ public class PostFragment extends Fragment implements PostView{
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,6 +46,8 @@ public class PostFragment extends Fragment implements PostView{
 
         return view;
     }
+
+
 
     @Override
     public void postRead(final List<Post> posts) {
