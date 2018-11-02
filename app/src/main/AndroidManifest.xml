@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".view.room.RoomDetail"
             android:screenOrientation="portrait" />
@@ -27,7 +27,7 @@
         </activity>
         <activity android:name=".view.introduce.IntroduceActivity" />
         <activity android:name=".view.contact.ContactActivity" />
-        <activity android:name=".view.huongdan.HuongDanIntent"></activity>
+        <activity android:name=".view.huongdan.HuongDanIntent" />
     </application>
 
 </manifest>
