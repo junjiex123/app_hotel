@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -66,10 +67,8 @@ public class ServiceFragment extends Fragment implements ServiceView {
         lvService.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), RoomDetail.class);
-                intent.putExtra("name", services.get(position).getName());
 
-                startActivity(intent);
+                Toast.makeText(getActivity(),"name" + services.get(position).getName(),Toast.LENGTH_SHORT).show();
 
             }
         });
