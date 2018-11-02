@@ -2,6 +2,7 @@ package android.app.hotel.view;
 
 import android.app.hotel.R;
 
+import android.app.hotel.view.Home.HomeFragment;
 import android.app.hotel.view.post.PostFragment;
 import android.app.hotel.view.room.RoomFragment;
 import android.app.hotel.view.service.ServiceFragment;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
     private MoreFragment moreFragment;
+    private HomeFragment homeFragment;
     private RoomFragment roomFragment;
     private PostFragment postFragment;
     private ServiceFragment serviceFragment;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         mapped();
 
-
+        setFragment(homeFragment);
         mMainNav.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                         default:
+                            setFragment(homeFragment);
                             return true;
                 }
             }
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         moreFragment = new MoreFragment();
         roomFragment = new RoomFragment();
         postFragment = new PostFragment();
+        homeFragment = new HomeFragment();
         serviceFragment = new ServiceFragment();
 
     }
