@@ -1,4 +1,4 @@
-package android.app.hotel.service.room;
+package android.app.hotel.service.post;
 
 import android.app.hotel.service.PostAPI;
 

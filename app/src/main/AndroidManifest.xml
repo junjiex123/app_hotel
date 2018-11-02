@@ -13,19 +13,21 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.room.RoomDetail"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.post.PostItent" />
+        <activity android:name=".view.OpenApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.room.RoomDetail"
-            android:screenOrientation="portrait" />
-        <activity android:name=".view.post.PostItent" />
         <activity android:name=".view.introduce.IntroduceActivity" />
-        <activity android:name=".view.contact.ContactActivity"></activity>
+        <activity android:name=".view.contact.ContactActivity" />
+        <activity android:name=".view.huongdan.HuongDanIntent" />
     </application>
 
 </manifest>

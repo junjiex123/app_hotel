@@ -1,6 +1,6 @@
 package android.app.hotel.view.post;
 
-import android.app.hotel.model.room.Post;
+import android.app.hotel.model.post.Post;
 
 import java.util.List;
 

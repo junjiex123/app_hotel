@@ -1,6 +1,6 @@
 package android.app.hotel.service;
 
-import android.app.hotel.model.room.RestResponsePost;
+import android.app.hotel.model.post.RestResponsePost;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,4 +1,4 @@
-package android.app.hotel.model.room;
+package android.app.hotel.model.post;
 
 import com.google.gson.annotations.SerializedName;
 
