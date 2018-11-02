@@ -54,6 +54,7 @@ public class ServiceAdapter extends BaseAdapter {
         View vi = convertView;
         ViewHolder holder;
 
+
         if (convertView == null){
             LayoutInflater inflater;
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
