@@ -87,6 +87,7 @@ public class MoreFragment extends Fragment {
         moreLayouts.add(new MoreLayout());
         moreLayouts.add(new MoreLayout(R.drawable.ic_assignment_ind, "Thông tin tài khoản"));
         moreLayouts.add(new MoreLayout(R.drawable.ic_action_help, "Hướng dẫn"));
+        moreLayouts.add(new MoreLayout(R.drawable.ic_action_import, "Đăng nhập"));
 
 
         return  moreLayouts;
