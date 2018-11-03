@@ -3,61 +3,16 @@ package android.app.hotel.model.service;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
 public class Service {
-    @SerializedName("id")
+    @SerializedName("name_service")
     @Expose
-    private Integer id;
-    @SerializedName("name")
-    @Expose
-    private String name;
-    @SerializedName("services")
-    @Expose
-    private List<ServiceName> services = null;
+    private String nameService;
 
-    public Integer getId() {
-        return id;
+    public String getNameService() {
+        return nameService;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setNameService(String nameService) {
+        this.nameService = nameService;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<ServiceName> getServices() {
-        return services;
-    }
-
-    public void setServices(List<ServiceName> services) {
-        this.services = services;
-    }
-//    @SerializedName("id")
-//    private Integer id;
-//
-//    @SerializedName("name")
-//    private String name;
-//
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
 }
