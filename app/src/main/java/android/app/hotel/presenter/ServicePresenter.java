@@ -1,9 +1,8 @@
 package android.app.hotel.presenter;
 
-import android.app.hotel.model.room.Room;
 import android.app.hotel.model.service.RestResponseService;
 import android.app.hotel.model.service.ServiceCategory;
-import android.app.hotel.service.room.ServiceService;
+import android.app.hotel.service.service.ServiceService;
 import android.app.hotel.view.service.ServiceView;
 
 import java.util.ArrayList;
