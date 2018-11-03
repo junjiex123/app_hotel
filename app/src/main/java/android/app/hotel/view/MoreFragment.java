@@ -4,6 +4,10 @@ package android.app.hotel.view;
 import android.app.hotel.R;
 import android.app.hotel.adapter.MoreLayoutAdapter;
 import android.app.hotel.model.more.MoreLayout;
+<<<<<<< HEAD
+import android.app.hotel.view.auth.LoginActivity;
+=======
+>>>>>>> fd32b679a03b8658c39c628a6f57adde0f25bce6
 import android.app.hotel.view.contact.ContactActivity;
 import android.app.hotel.view.huongdan.HuongDanIntent;
 import android.app.hotel.view.introduce.IntroduceActivity;
@@ -65,6 +69,13 @@ public class MoreFragment extends Fragment {
                         startActivity(iHuongDan);
                         break;
 
+<<<<<<< HEAD
+                    case 5:
+                        Intent iDangNhap = new Intent(getActivity(), LoginActivity.class);
+                        startActivity(iDangNhap);
+                        break;
+=======
+>>>>>>> fd32b679a03b8658c39c628a6f57adde0f25bce6
                         default:
                             break;
                 }
