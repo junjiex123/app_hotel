@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_room"
+        android:icon="@drawable/ic_assignment_ind"
+        android:title="@string/nav_room" />
+    <item
+        android:id="@+id/nav_service"
+        android:icon="@drawable/ic_local_laundry_service"
+        android:title="@string/nav_service" />
+    <item
+        android:id="@+id/nav_post"
+        android:icon="@drawable/ic_action_news"
+        android:title="@string/nav_news" />
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_more_horiz"
+        android:title="@string/nav_more" />
+</menu>

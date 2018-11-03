@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.app.hotel">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.room.RoomDetail"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.post.PostItent" />
+        <activity android:name=".view.OpenApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.introduce.IntroduceActivity" />
+        <activity android:name=".view.contact.ContactActivity" />
+        <activity android:name=".view.huongdan.HuongDanIntent" />
+        <activity android:name=".view.auth.LoginActivity" />
+        <activity android:name=".view.auth.RegisterActivity"></activity>
+    </application>
+
+</manifest>
