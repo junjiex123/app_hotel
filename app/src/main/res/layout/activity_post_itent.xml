@@ -63,7 +63,7 @@
         android:id="@+id/txtadmin"
         android:layout_width="158dp"
         android:layout_height="22dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="48dp"
         android:gravity="left"
         android:text="admin"
@@ -89,6 +89,7 @@
         android:layout_marginEnd="48dp"
         android:gravity="left"
         android:text="Tag"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtago" />
 
@@ -125,7 +126,7 @@
         android:layout_width="101dp"
         android:layout_height="22dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="8dp"
         android:textColor="#000"
         android:text="Member create:"
@@ -148,6 +149,8 @@
 
         <TextView
             android:id="@+id/text_view_scroll"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="left"
