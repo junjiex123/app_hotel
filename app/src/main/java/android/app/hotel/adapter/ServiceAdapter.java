@@ -86,12 +86,27 @@ public class ServiceAdapter extends BaseAdapter {
                     expandButton.setBackgroundResource(arrowID);
                 }
             });
+
+
+//            int arrowID = android.R.drawable.arrow_down_float;
+//            int expandStaus = _servicesLayout.getVisibility();
+//            if(expandStaus == View.VISIBLE) {
+//                expandStaus = View.GONE;
+//                arrowID = android.R.drawable.arrow_down_float;
+//            } else {
+//                expandStaus = View.VISIBLE;
+//                arrowID = android.R.drawable.arrow_up_float;
+//
+//            }
+//            _servicesLayout.setVisibility(expandStaus);
+//            expandButton.setBackgroundResource(arrowID);
+
             List<Service> services = serviceCategories.get(position).getServices();
 
             for (Service service: services) {
                 TextView serviceName = new TextView(vi.getContext());
                 serviceName.setText(service.getNameService());
-                serviceName.setTextSize(20);
+                serviceName.setTextSize(18);
                 _servicesLayout.addView(serviceName);
             }
 

@@ -2,11 +2,11 @@ package android.app.hotel.adapter;
 
 import android.app.hotel.R;
 import android.app.hotel.model.room.Room;
+
 import android.app.hotel.view.room.RoomDetail;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,7 +77,6 @@ public class RoomAdapter extends BaseAdapter {
         holder.txtDescription.setText(rooms.get(position).getShortDescription());
         holder.txtPrice.setText(rooms.get(position).getPrice() + " Vnđ / Đêm");
         Picasso.get().load(rooms.get(position).getLinkImg()).into(holder.imgRoom);
-
         final int _position = position;
 
         vi.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +89,7 @@ public class RoomAdapter extends BaseAdapter {
                 intent.putExtra("acreage", "" + rooms.get(_position).getAcreage());
                 intent.putExtra("description", rooms.get(_position).getDescription());
                 v.getContext().startActivity(intent);
+
             }
         });
 

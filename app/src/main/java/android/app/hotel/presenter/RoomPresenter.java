@@ -21,7 +21,7 @@ public class RoomPresenter {
         this.roomView = roomView;
         if (roomService == null) {
             roomService = new RoomService();
-            
+
         }
     }
 
@@ -37,7 +37,7 @@ public class RoomPresenter {
                     if (restResponse != null && restResponse.getData() != null){
                         rooms.clear();
                         List<Room> result = restResponse.getData();
-                        if (result!=null && result.size() > 0){
+                        if (result!=null && result.size() > 0) {
                             rooms = result;
                             roomView.updateView(result);
                         }
