@@ -16,10 +16,10 @@ public class OpenApp extends AppCompatActivity {
         setContentView(R.layout.activity_open_app);
         mLayoutFlash = findViewById(R.id.LayoutFlash);
         new Thread(new Runnable() {
-            @Override
-            public void run() {
+                @Override
+                public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(3000);
                     Intent wellcome = new Intent(OpenApp.this,MainActivity.class);
                     startActivity(wellcome);
                     finish();

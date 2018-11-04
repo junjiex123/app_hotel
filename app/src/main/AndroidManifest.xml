@@ -29,7 +29,7 @@
         <activity android:name=".view.contact.ContactActivity" />
         <activity android:name=".view.huongdan.HuongDanIntent" />
         <activity android:name=".view.auth.LoginActivity" />
-        <activity android:name=".view.auth.RegisterActivity"></activity>
+        <activity android:name=".view.auth.RegisterActivity" />
     </application>
 
 </manifest>

@@ -34,7 +34,6 @@ public class HomeFragment extends Fragment {
     int ngay = calendar.get(Calendar.DATE);
     int thang = calendar.get(Calendar.MONTH);
     int nam = calendar.get(Calendar.YEAR);
-    int counterroom = 0;
     int counterpeople = 0;
 
     public HomeFragment() {
@@ -79,41 +78,11 @@ public class HomeFragment extends Fragment {
         });
 //
         final EditText edTongPhong = (EditText)view.findViewById(R.id.edTongPhong);
-        final EditText edphong = (EditText)view.findViewById(R.id.edPhong);
         final EditText ednguoi = (EditText)view.findViewById(R.id.ednguoi);
 
-        final Button btncongphong = (Button) view.findViewById(R.id.btcongphong);
-        final Button btntruphong = (Button) view.findViewById(R.id.bttruphong);
         final Button btntrunguoi = (Button) view.findViewById(R.id.bttrunguoi);
         final Button btncongnguoi = (Button) view.findViewById(R.id.btcongnguoi);
 //
-        btncongphong.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (counterroom>=10){
-                    counterroom = 10;
-                    Toast.makeText(view.getContext(),"Không được đặt phòng quá giới hạn cho phép", Toast.LENGTH_SHORT).show();
-                }else {
-                    counterroom++;
-                    edTongPhong.setText(String.valueOf(counterroom) + " - " + "Phòng" + " | " + String.valueOf(counterpeople) + " - " + "Người");
-                    edphong.setText(String.valueOf(counterroom));
-                }
-            }
-        });
-//
-        btntruphong.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (counterroom <= 0){
-                    counterroom = 0;
-                } else {
-                    counterroom--;
-                    edphong.setText(String.valueOf(counterroom));
-                    edTongPhong.setText(String.valueOf(counterroom) + " - " + "Phòng" + " | " + String.valueOf(counterpeople) + " - " + "Người");
-                }
-            }
-        });
-
         btntrunguoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,7 +91,7 @@ public class HomeFragment extends Fragment {
                 } else {
                     counterpeople--;
                     ednguoi.setText(String.valueOf(counterpeople));
-                    edTongPhong.setText(String.valueOf(counterroom) + " - " + "Phòng" + " | " + String.valueOf(counterpeople) + " - " + "Người");
+                    edTongPhong.setText("1" + " - " + "Phòng" + " | " + String.valueOf(counterpeople) + " - " + "Người");
                 }
             }
         });
@@ -130,13 +99,13 @@ public class HomeFragment extends Fragment {
         btncongnguoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (counterpeople >= 10){
-                    counterpeople = 10;
+                if (counterpeople >= 4){
+                    counterpeople = 4;
                     Toast.makeText(view.getContext(),"Số người quá giới hạn cho phép", Toast.LENGTH_SHORT).show();
                 }else {
                     counterpeople++;
                     ednguoi.setText(String.valueOf(counterpeople));
-                    edTongPhong.setText(String.valueOf(counterroom) + " - " + "Phòng" + " | " + String.valueOf(counterpeople) + " - " + "Người");
+                    edTongPhong.setText("1" +  " - " + "Phòng" + " | " + String.valueOf(counterpeople) + " - " + "Người");
 
                 }
             }
