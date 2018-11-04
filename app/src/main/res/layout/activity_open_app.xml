@@ -10,7 +10,7 @@
         android:id="@+id/LayoutFlash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_wellcome"
+        android:background="#3578e5"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,34 +18,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="WellCome"
-            android:textColor="#000"
-            android:textSize="50dp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="To"
-            android:textColor="#000"
-            android:textSize="50dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Hotel"
-            android:textColor="#000"
-            android:textSize="50dp" />
+            android:text="Dubai Hotel"
+            android:textColor="#ffff"
+            android:textSize="55dp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -54,8 +35,9 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:text="v1.0"
-            android:textColor="#000"
-            android:textSize="25dp" />
+            android:textColor="#ffff"
+            android:textSize="30dp" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

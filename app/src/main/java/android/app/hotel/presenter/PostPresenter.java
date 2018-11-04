@@ -3,8 +3,11 @@ package android.app.hotel.presenter;
 import android.app.hotel.model.post.Post;
 import android.app.hotel.model.post.RestResponsePost;
 import android.app.hotel.service.post.PostService;
-import android.app.hotel.view.post.PostView;
 
+import android.app.hotel.view.post.PostView;
+import android.view.View;
+
+import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -14,6 +17,8 @@ public class PostPresenter {
     private PostView postView;
     private PostService postService;
     private RestResponsePost restResponsePost;
+    public View v;
+    public static List<Post> posts = new ArrayList<>();
 
     public PostPresenter(PostView postViewa) {
         this.postView = postViewa;
@@ -22,7 +27,7 @@ public class PostPresenter {
         }
     }
 
-    public void getposts(){
+    public void retryPosts(){
         postService
                 .getAPI()
                 .getResults()
@@ -32,8 +37,14 @@ public class PostPresenter {
                         restResponsePost = response.body();
 
                         if (restResponsePost != null && restResponsePost.getData() != null){
+
+                            posts.clear();
                             List<Post> result = restResponsePost.getData();
-                            postView.postRead(result);
+
+                            if(result!=null && result.size()>0){
+                                posts = result;
+                                postView.updateView(posts);
+                            }
                         }
                     }
 
@@ -46,6 +57,9 @@ public class PostPresenter {
                         }
                     }
                 });
+    }
+    public static List<Post> getPosts() {
+        return posts;
     }
 }
 
