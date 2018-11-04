@@ -14,7 +14,7 @@ public class IntroduceActivity extends AppCompatActivity {
     TextView tieuDe = null;
     TextView noidung = null;
 
-    String mtieude = "Hotel Manager";
+    String mtieude = "Dubai Hotel";
 
     String mnoidung = "Đến với Đà Nẵng – thành phố du lịch với vô số danh lam thắng cảnh đẹp, khu vui chơi sôi động, ẩm thực đặc sắc, con người thân thiện, AVA Hotel & Apartment sẽ là sự lựa chọn lý tưởng để đồng hành cũng bạn trong suốt chuyến đi khám phá vùng đất này. Với thiết kế sang trọng Âu – Á kết hợp, nội thất cao cấp 5 sao hiện đại mang đến sự gần gũi, ấm cúng, AVA Hotel & Apartment mong muốn cung cấp cho các bạn một căn hộ đầy đủ tiện nghi cũng như các tiện ích đi kèm với mức giá hợp lý nhất. Khách sạn và căn hộ Ava là một trong những khách sạn gần bãi biển Mỹ Khê Đà Nẵng và cũng là khách sạn Đà Nẵng gần biển giá rẻ nhất hiện nay.\n" +
             "\n" +
