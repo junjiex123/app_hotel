@@ -101,7 +101,7 @@ public class PostAdapter extends BaseAdapter {
     }
 
     public void setData(List<Post> posts) {
-        this.posts. clear();
+        this.posts.clear();
         this.posts = posts;
     }
 
