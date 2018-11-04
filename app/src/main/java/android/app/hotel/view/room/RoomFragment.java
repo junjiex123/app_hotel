@@ -31,6 +31,7 @@ public class RoomFragment extends Fragment implements RoomView {
     private Toolbar toolbar;
     private RoomAdapter roomAdapter;
     private ListView lvRoom;
+    private RoomPresenter roomPresenter;
 
 
     public RoomFragment() {
@@ -52,30 +53,24 @@ public class RoomFragment extends Fragment implements RoomView {
 
         lvRoom = (ListView) view.findViewById(R.id.listviewRoom);
 
-        RoomPresenter roomPresenter = new RoomPresenter(this);
-        roomPresenter.getRooms();
+        roomPresenter = new RoomPresenter(this);
+
+        roomAdapter = new RoomAdapter(this.getContext(), R.layout.view_room, RoomPresenter.getRooms());
+        lvRoom.setAdapter(roomAdapter);
+
+        roomPresenter.retryRooms();
 
         return view;
     }
 
     @Override
-    public void roomRead(final List<Room> rooms) {
-        roomAdapter = new RoomAdapter(this.getContext(), R.layout.view_room, rooms);
-        lvRoom.setAdapter(roomAdapter);
-
-        lvRoom.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), RoomDetail.class);
-                intent.putExtra("name", rooms.get(position).getName());
-                intent.putExtra("price", "" +rooms.get(position).getPrice());
-                intent.putExtra("image", rooms.get(position).getLinkImg());
-                intent.putExtra("acreage", "" + rooms.get(position).getAcreage());
-                intent.putExtra("description", rooms.get(position).getDescription());
-                startActivity(intent);
-
-            }
-        });
+    public void updateView(final List<Room> rooms) {
+       try {
+           roomAdapter.setData(rooms);
+           roomAdapter.notifyDataSetChanged();
+       } catch (Exception e) {
+           Log.d("Room", "Error" + e);
+       }
     }
 
     @Override
