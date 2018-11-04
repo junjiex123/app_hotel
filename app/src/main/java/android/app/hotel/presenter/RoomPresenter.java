@@ -5,7 +5,6 @@ import android.app.hotel.model.room.Room;
 import android.app.hotel.service.room.RoomService;
 import android.app.hotel.view.room.RoomView;
 
-import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -15,16 +14,16 @@ public class RoomPresenter {
     private RoomView roomView;
     private RoomService roomService;
     private RestResponse restResponse;
-    public static List<Room> rooms = new ArrayList<>();
 
     public RoomPresenter(RoomView roomView) {
         this.roomView = roomView;
         if (roomService == null) {
             roomService = new RoomService();
+
         }
     }
 
-    public void retryRooms(){
+    public void getRooms(){
         roomService
                 .getAPI()
                 .getResults()
@@ -34,13 +33,8 @@ public class RoomPresenter {
                         restResponse = response.body();
 
                         if (restResponse != null && restResponse.getData() != null){
-                            rooms.clear();
                             List<Room> result = restResponse.getData();
-                            if(result!=null && result.size()>0)
-                            {
-                                rooms = result;
-                                roomView.updateView(rooms);
-                            }
+                            roomView.roomRead(result);
                         }
                     }
 
@@ -53,9 +47,5 @@ public class RoomPresenter {
                         }
                     }
                 });
-    }
-
-    public static List<Room> getRooms() {
-        return rooms;
     }
 }
