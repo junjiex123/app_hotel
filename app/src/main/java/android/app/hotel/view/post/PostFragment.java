@@ -50,7 +50,7 @@ public class PostFragment extends Fragment implements PostView{
         postAdapter = new PostAdapter(this.getContext(), R.layout.view_post, PostPresenter.getPosts());
         lvPost.setAdapter(postAdapter);
 
-        //update rooms list
+        //update posts list
         postPresenter.retryPosts();
 
         return view;

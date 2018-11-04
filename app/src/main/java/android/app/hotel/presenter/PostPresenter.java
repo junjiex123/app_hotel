@@ -17,11 +17,10 @@ public class PostPresenter {
     private PostView postView;
     private PostService postService;
     private RestResponsePost restResponsePost;
-    public View v;
     public static List<Post> posts = new ArrayList<>();
 
-    public PostPresenter(PostView postViewa) {
-        this.postView = postViewa;
+    public PostPresenter(PostView postView) {
+        this.postView = postView;
         if (postService == null) {
             postService = new PostService();
         }
