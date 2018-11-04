@@ -38,7 +38,6 @@ public class MoreFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_more, container, false);
         ListView listView = (ListView) view.findViewById(R.id.lvMore);
         MoreLayoutAdapter moreLayoutAdapter = new MoreLayoutAdapter(this.getContext(), generateData());
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -73,8 +72,6 @@ public class MoreFragment extends Fragment {
         });
 
         listView.setAdapter(moreLayoutAdapter);
-
-
 
         return view;
     }

@@ -19,6 +19,7 @@ public class RoomPresenter {
         this.roomView = roomView;
         if (roomService == null) {
             roomService = new RoomService();
+            
         }
     }
 
