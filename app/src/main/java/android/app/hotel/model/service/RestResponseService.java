@@ -1,7 +1,5 @@
 package android.app.hotel.model.service;
 
-import android.app.hotel.model.room.Room;
-
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -14,7 +12,7 @@ public class RestResponseService {
     private Object error;
 
     @SerializedName("data")
-    private List<Service> data = null;
+    private List<ServiceCategory> data = null;
 
     public Integer getStatus() {
         return status;
@@ -32,11 +30,11 @@ public class RestResponseService {
         this.error = error;
     }
 
-    public List<Service> getData() {
+    public List<ServiceCategory> getData() {
         return data;
     }
 
-    public void setData(List<Service> data) {
+    public void setData(List<ServiceCategory> data) {
         this.data = data;
     }
 }

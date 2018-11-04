@@ -1,14 +1,11 @@
 package android.app.hotel.presenter;
 
-import android.app.hotel.model.room.RestResponse;
-import android.app.hotel.model.room.Room;
 import android.app.hotel.model.service.RestResponseService;
-import android.app.hotel.model.service.Service;
-import android.app.hotel.service.room.RoomService;
-import android.app.hotel.service.room.ServiceService;
-import android.app.hotel.view.room.RoomView;
+import android.app.hotel.model.service.ServiceCategory;
+import android.app.hotel.service.service.ServiceService;
 import android.app.hotel.view.service.ServiceView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -19,6 +16,7 @@ public class ServicePresenter {
     private ServiceView serviceView;
     private ServiceService serviceService;
     private RestResponseService restResponseService;
+    public static List<ServiceCategory> serviceCategories = new ArrayList <>();
 
     public ServicePresenter(ServiceView serviceView) {
         this.serviceView = serviceView;
@@ -27,7 +25,7 @@ public class ServicePresenter {
         }
     }
 
-    public void getServices(){
+    public void retryServices(){
         serviceService
             .getAPI()
             .getResults()
@@ -37,8 +35,14 @@ public class ServicePresenter {
                     restResponseService = response.body();
 
                     if (restResponseService != null && restResponseService.getData() != null){
-                        List<Service> result = restResponseService.getData();
-                        serviceView.serviceRead(result);
+
+                        serviceCategories.clear();
+                        List<ServiceCategory> result = restResponseService.getData();
+                        if (result!=null && result.size()>0)
+                        {
+                            serviceCategories = result;
+                            serviceView.updateView(serviceCategories);
+                        }
                     }
                 }
 
@@ -51,5 +55,8 @@ public class ServicePresenter {
                     }
                 }
             });
+    }
+    public static List<ServiceCategory> getServices() {
+        return serviceCategories;
     }
 }

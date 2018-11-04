@@ -2,15 +2,11 @@ package android.app.hotel.view.service;
 
 
 import android.app.hotel.R;
-import android.app.hotel.adapter.RoomAdapter;
+
 import android.app.hotel.adapter.ServiceAdapter;
-import android.app.hotel.model.room.Room;
-import android.app.hotel.model.service.Service;
-import android.app.hotel.presenter.RoomPresenter;
+import android.app.hotel.model.service.ServiceCategory;
 import android.app.hotel.presenter.ServicePresenter;
-import android.app.hotel.view.room.RoomDetail;
-import android.app.hotel.view.room.RoomView;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +29,7 @@ public class ServiceFragment extends Fragment implements ServiceView {
     private Toolbar toolbar;
     private ServiceAdapter serviceAdapter;
     private ListView lvService;
+    ServicePresenter servicePresenter;
 
     public ServiceFragment() {
         // Required empty public constructor
@@ -50,25 +47,27 @@ public class ServiceFragment extends Fragment implements ServiceView {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
 
-
+        servicePresenter = new ServicePresenter(this);
         lvService = (ListView) view.findViewById(R.id.listviewService);
+        serviceAdapter = new ServiceAdapter(this.getContext(),R.layout.view_service,ServicePresenter.getServices());
+        lvService.setAdapter(serviceAdapter);
 
-        ServicePresenter servicePresenter = new ServicePresenter(this);
-        servicePresenter.getServices();
+        //update rooms list
+        servicePresenter.retryServices();
 
         return view;
     }
 
     @Override
-    public void serviceRead(final List<Service> services) {
-        serviceAdapter = new ServiceAdapter(this.getContext(), R.layout.view_service, services);
+    public void updateView(final List<ServiceCategory> serviceCategories) {
+        serviceAdapter = new ServiceAdapter(this.getContext(), R.layout.view_service, serviceCategories);
         lvService.setAdapter(serviceAdapter);
 
         lvService.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getActivity(),"name" + services.get(position).getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"name" + serviceCategories.get(position).getName(),Toast.LENGTH_SHORT).show();
 
             }
         });
