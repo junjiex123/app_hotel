@@ -30,6 +30,8 @@
         <activity android:name=".view.huongdan.HuongDanIntent" />
         <activity android:name=".view.auth.LoginActivity" />
         <activity android:name=".view.auth.RegisterActivity" />
+        <activity android:name=".view.booking.BookingActivity" />
+        <activity android:name=".view.booking.FillInforActivity"></activity>
     </application>
 
 </manifest>
